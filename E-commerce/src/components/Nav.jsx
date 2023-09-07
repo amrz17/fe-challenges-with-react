@@ -1,5 +1,5 @@
 import { logo, avatar } from "../assets/images";
-import { iconCart, iconMenu } from "../assets/icons";
+import { iconCartNav, iconMenu } from "../assets/icons";
 import { navLink } from "../constants";
 
 export const Nav = () => {
@@ -32,8 +32,9 @@ export const Nav = () => {
         </ul>
         <a href="/" className="flex justify-end mx-7">
           <img 
-          src={iconCart} 
-          alt="icon-cart" 
+          className="text-black bg-black"
+          src={iconCartNav} 
+          alt="icon-cart-nav" 
           width={25}
           height={25}/>
           
@@ -47,6 +48,7 @@ export const Nav = () => {
           height={55} />
         </a>
       </nav>
+      <hr className="mx-auto flex justify-center items-center w-10/12 mt-8"/>
     </header>
   )
 }

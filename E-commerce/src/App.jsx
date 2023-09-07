@@ -8,7 +8,7 @@ const App = () => {
   return (
     <main>
       <Nav />
-      <section className="flex justify-center items-center min-h-screen gap-10">
+      <section className="flex justify-center items-center min-h-screen gap-16">
         <ProductImg />
         <ProductDesc />
       </section>

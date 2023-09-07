@@ -1,3 +1,4 @@
+import iconCartNav from "./icon-cart-nav.svg"
 import iconCart from "./icon-cart.svg"
 import iconClose from "./icon-close.svg"
 import iconDelete from "./icon-delete.svg"
@@ -8,6 +9,7 @@ import iconPlus from "./icon-plus.svg"
 import iconPrevious from "./icon-previous.svg"
 
 export {
+    iconCartNav,
     iconCart,
     iconClose,
     iconDelete,
