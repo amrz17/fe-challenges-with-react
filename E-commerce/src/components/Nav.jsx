@@ -22,7 +22,7 @@ export const Nav = () => {
         </a>
         <ul className="text-base text-dark-grayish-blue flex flex-1 justify-start items-center gap-10 ml-14">
           {navLink.map((item) => (
-            <li key={item.label}>
+            <li className="hover:text-black hover:underline hover:text-lg underline-offset-10 decoration-orange decoration-4" key={item.label}>
               <a 
               href={item.href}>
                 {item.label}
@@ -30,25 +30,24 @@ export const Nav = () => {
             </li>
           ))}
         </ul>
-        <a href="/" className="flex justify-end mx-7">
+        <a href="/"  className="flex justify-end mx-7">
           <img 
           className="text-black bg-black"
           src={iconCartNav} 
           alt="icon-cart-nav" 
           width={25}
           height={25}/>
-          
         </a>
         <a href="/" className="flex justify-end mx-3">
           <img 
-
+          className="rounded-full hover:ring-2 hover:ring-orange"
           src={avatar} 
           alt="avatar"
           width={55}
           height={55} />
         </a>
       </nav>
-      <hr className="mx-auto flex justify-center items-center w-10/12 mt-8"/>
+      <hr className="mx-auto flex justify-center items-center w-10/12 mt-7"/>
     </header>
   )
 }

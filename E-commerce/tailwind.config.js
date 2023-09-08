@@ -16,6 +16,9 @@ export default {
         "white" :  "hsl(0, 0%, 100%)", 
         "black" : "rgba(0, 0, 0, 0,75",
       },
+      textUnderlineOffset: {
+        10: '45px'
+      }
       }
   },
   plugins: [],
