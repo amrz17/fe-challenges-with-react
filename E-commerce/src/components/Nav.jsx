@@ -1,6 +1,7 @@
 import { logo, avatar } from "../assets/images";
 import { iconCartNav, iconMenu } from "../assets/icons";
 import { navLink } from "../constants";
+import { DropDown } from "./DropDown";
 
 export const Nav = () => {
   return (
@@ -48,6 +49,7 @@ export const Nav = () => {
         </a>
       </nav>
       <hr className="mx-auto flex justify-center items-center w-10/12 mt-7"/>
+      <DropDown />
     </header>
   )
 }

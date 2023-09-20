@@ -18,6 +18,9 @@ export default {
       },
       textUnderlineOffset: {
         10: '45px'
+      },
+      width: {
+        '82': '350px'
       }
       }
   },
