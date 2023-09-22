@@ -9,9 +9,9 @@ export const navLink = [
     { href: "#contact", label: "Contact" }
 ];
 
-export const product = [
+export const products = [
     { 
-        thumbnail: thumbnailProduct1,
+        thumbnail: thumbnailProduct1, 
         bigProduct: product1
     },
     {

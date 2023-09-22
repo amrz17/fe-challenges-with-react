@@ -2,8 +2,13 @@ import { logo, avatar } from "../assets/images";
 import { iconCartNav, iconMenu } from "../assets/icons";
 import { navLink } from "../constants";
 import { DropDown } from "./DropDown";
+import { useState } from "react";
+
 
 export const Nav = () => {
+
+  const [openCart, setOpenCart] = useState(false)
+
   return (
     <header className="w-full absolute z-10 p-4">
       <nav className="flex justify-center items-center  mx-auto max-container w-full">
@@ -31,7 +36,7 @@ export const Nav = () => {
             </li>
           ))}
         </ul>
-        <a href="/"  className="flex justify-end mx-7">
+        <a href="/" onClick={(e) => {e.preventDefault(); setOpenCart ((prev) => !prev)}} className="flex justify-end mx-7">
           <img 
           className="text-black bg-black"
           src={iconCartNav} 
@@ -49,7 +54,10 @@ export const Nav = () => {
         </a>
       </nav>
       <hr className="mx-auto flex justify-center items-center w-10/12 mt-7"/>
-      <DropDown />
+      {
+        openCart && <DropDown />
+      }
+      
     </header>
   )
 }
