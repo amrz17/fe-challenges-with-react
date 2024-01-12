@@ -7,8 +7,8 @@ export const ProductImg = () => {
   const [bigProductImg, setbigProductImg] = useState(product1);
 
   return (
-    <section className="mt-20 lg:mt-8">
-      <div className="mb-4 lg:mb-7">
+    <section className="mt-20 md:mt-24 lg:mt-8">
+      <div className="relative mb-4 lg:mb-7 z-0">
         <img
           className="lg:rounded-2xl object-contain relative z-10"
           src={bigProductImg}

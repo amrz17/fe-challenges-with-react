@@ -7,8 +7,11 @@ export const Button = () => {
     return numberProduct;
   };
   return (
-    <div className="w-full flex gap-5">
-      <button className="text-lg font-bold rounded-lg bg-light-grayish-blue h-16 w-1/4 text-black flex items-center justify-between">
+    <div className="w-full flex-col lg:flex-row lg:gap-5">
+      <button
+        className="mb-4 text-lg font-bold rounded-lg bg-light-grayish-blue 
+        h-16 w-full lg:w-1/4 text-black flex items-center justify-between"
+      >
         <img
           className="ml-2"
           onClick={() => setNumberProduct((numberProduct) => numberProduct - 1)}
@@ -26,7 +29,8 @@ export const Button = () => {
       <button
         onClick={handleSubmit}
         type="submit"
-        className="font-bold rounded-lg bg-orange text-white h-16 w-80 flex justify-center items-center"
+        className="font-bold rounded-lg bg-orange text-white h-16 w-full 
+        lg:w-80 flex justify-center items-center mb-8"
       >
         <img className="mr-2 text-white" src={iconCart} alt="cart" />
         Add Chart

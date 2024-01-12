@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Button } from "../components/Button";
 
 export const ProductDesc = () => {
+  const [total, setTotal] = useState(false);
+
   return (
-    <section className="lg:p-10">
+    <section className="p-10">
       <p className="text-orange font-bold mb-4">SNEAKER COMPANY</p>
       <h1 className="font-bold text-6xl mb-10">
         Fall Limited Edition <br /> Sneakers
@@ -19,7 +22,7 @@ export const ProductDesc = () => {
         </span>
       </p>
       <p className="font-bold text-grayish-blue line-through mb-8">$250.00</p>
-      <Button />
+      <Button total={total} />
     </section>
   );
 };

@@ -3,16 +3,26 @@ import { iconCartNav, iconMenu } from "../assets/icons";
 import { navLink } from "../constants";
 import { DropDown } from "./DropDown";
 import { useState } from "react";
+import { SideBar } from "./SideBar";
 
 export const Nav = () => {
   const [openCart, setOpenCart] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   return (
     <header className="w-full absolute z-10 p-4">
       <nav className="flex justify-center items-center  mx-auto max-container w-full">
-        <div className="flex gap-4 mr-8">
+        <div className="flex gap-4 mr-10 md:mr-48">
           <div className="flex lg:hidden">
-            <img src={iconMenu} alt="icon-menu" width={30} />
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                setMenu((prev) => !prev);
+              }}
+            >
+              <img src={iconMenu} alt="icon-menu" width={30} />
+            </a>
           </div>
           <a href="/">
             <img src={logo} alt="logo" width={150} />
@@ -53,8 +63,9 @@ export const Nav = () => {
           />
         </a>
       </nav>
-      <hr className="mx-auto flex justify-center items-center w-10/12 mt-7" />
+      <hr className="hidden mx-auto lg:flex justify-center items-center w-10/12 mt-7" />
       {openCart && <DropDown />}
+      {menu && <SideBar />}
     </header>
   );
 };

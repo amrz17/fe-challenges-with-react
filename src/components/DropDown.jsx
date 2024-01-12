@@ -3,7 +3,10 @@ import { thumbnailProduct1 } from "../assets/images";
 
 export const DropDown = () => {
   return (
-    <div className="w-82 h-56 border rounded-md absolute top-16 right-40 mt-4 bg-white">
+    <div
+      className="w-82 h-56 border rounded-md absolute top-16 md:right-40 
+      mt-4 bg-white"
+    >
       <h2 className="font-bold ml-3 mt-3 text-lg">Cart</h2>
       <hr className="bg-grayish-blue mt-4" />
       <div className="flex gap-3 justify-center items-center mt-5">
