@@ -2,6 +2,7 @@ import { useState } from "react";
 import { products } from "../constants";
 import { product1 } from "../assets/images";
 import { ProductCard } from "../components/ProductCard";
+import { ProductImgMobile } from "./ProductImgMobile";
 
 export const ProductImg = () => {
   const [bigProductImg, setbigProductImg] = useState(product1);
@@ -9,8 +10,11 @@ export const ProductImg = () => {
   return (
     <section className="mt-20 md:mt-24 lg:mt-8">
       <div className="relative mb-4 lg:mb-7 z-0">
+        <div className="lg:hidden">
+          <ProductImgMobile />
+        </div>
         <img
-          className="lg:rounded-2xl object-contain relative z-10"
+          className="hidden lg:flex lg:rounded-2xl object-contain relative z-10"
           src={bigProductImg}
           alt="product-1"
           width={500}

@@ -1,7 +1,5 @@
-import { ProductDesc } from "./ProductDesc";
 import { ProductImg } from "./ProductImg";
+import { ProductDetail } from "./ProductDetail";
 
-export {
-    ProductDesc,
-    ProductImg
-}
+export { ProductImg, ProductDetail };
+

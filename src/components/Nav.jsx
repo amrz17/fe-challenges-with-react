@@ -14,13 +14,14 @@ export const Nav = () => {
         className="flex justify-center items-center  
       mx-auto max-container w-full"
       >
-        <div className="flex gap-4 mr-10 md:mr-48">
-          <div className="flex lg:hidden gap-6">
+        <div className="flex gap-4 mr-12 md:mr-[11.5rem] md:mr-48">
+          <div className="flex gap-8">
             <button
               onClick={(e) => {
                 e.preventDefault();
                 setOpenMenu((openMenu) => !openMenu);
               }}
+              className="lg:hidden"
             >
               <img src={iconMenu} alt="icon-menu" width={30} />
             </button>

@@ -1,5 +1,5 @@
 import { Nav } from "./components/Nav";
-import { ProductDesc, ProductImg } from "./sections";
+import { ProductDetail, ProductImg } from "./sections";
 
 const App = () => {
   return (
@@ -7,7 +7,7 @@ const App = () => {
       <Nav />
       <section className="flex flex-col lg:flex-row justify-center items-center min-h-screen lg:gap-16">
         <ProductImg />
-        <ProductDesc />
+        <ProductDetail />
       </section>
     </main>
   );
