@@ -1,5 +1,3 @@
-import { Button } from "../components/Button";
-
 export const ProductDetail = () => {
   return (
     <section className="p-10">
@@ -14,13 +12,16 @@ export const ProductDetail = () => {
       </p>
       <p className="flex">
         <strong className="text-4xl text-black">$125.00</strong>
-        <span className="ml-3 mt-1 items-center h-6 w-12 text-center font-bold text-orange bg-pale-orange  rounded-md">
+        <span
+          className="ml-3 mt-1 items-center h-6 w-12 text-center font-bold 
+          text-orange bg-pale-orange rounded-md"
+        >
           50%
         </span>
       </p>
-
-      <p className="font-bold text-grayish-blue line-through mb-8">$250.00</p>
-      <Button />
+      <p className="font-bold text-grayish-blue line-through lg:mb-8">
+        $250.00
+      </p>
     </section>
   );
 };

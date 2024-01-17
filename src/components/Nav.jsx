@@ -3,8 +3,9 @@ import { iconCartNav, iconClose, iconMenu } from "../assets/icons";
 import { navLink } from "../constants";
 import { DropDown } from "./DropDown";
 import { useState } from "react";
+import { EmpetyCart } from "./EmpetyCart";
 
-export const Nav = () => {
+export const Nav = ({ numberProduct }) => {
   const [openCart, setOpenCart] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -14,7 +15,7 @@ export const Nav = () => {
         className="flex justify-center items-center  
       mx-auto max-container w-full"
       >
-        <div className="flex gap-4 mr-12 md:mr-[11.5rem] md:mr-48">
+        <div className="flex gap-4 mr-12 md:mr-60">
           <div className="flex gap-8">
             <button
               onClick={(e) => {
@@ -27,11 +28,11 @@ export const Nav = () => {
             </button>
             {openMenu && (
               <div
-                className="flex w-3/5 absolute left-0 top-0 
+                className="flex w-3/5 md:w-1/2 absolute left-0 top-0 
                 bg-white h-screen"
               >
                 <ul className="pl-6">
-                  <button className="mt-4 mb-8">
+                  <button className="mt-4 mb-8 md:mb-12">
                     <img
                       src={iconClose}
                       width={30}
@@ -42,7 +43,10 @@ export const Nav = () => {
                     />
                   </button>
                   {navLink.map((link) => (
-                    <li key={link.label} className="mb-6 text-xl font-bold">
+                    <li
+                      key={link.label}
+                      className="text-black mb-6 text-xl md:text-2xl md:ml-12 font-bold"
+                    >
                       <a href={link.href}>{link.label}</a>
                     </li>
                   ))}
@@ -84,7 +88,12 @@ export const Nav = () => {
         </a>
       </nav>
       <hr className="hidden mx-auto lg:flex justify-center items-center w-10/12 mt-7" />
-      {openCart && <DropDown />}
+      {openCart &&
+        (numberProduct === 0 ? (
+          <EmpetyCart />
+        ) : (
+          <DropDown numberProduct={numberProduct} />
+        ))}
     </header>
   );
 };

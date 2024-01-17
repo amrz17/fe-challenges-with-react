@@ -1,30 +1,20 @@
-import { useState } from "react";
 import { iconMinus, iconPlus, iconCart } from "../assets/icons";
 
-export const Button = () => {
-  const [numberProduct, setNumberProduct] = useState(0);
-  const handleSubmit = () => {
-    return numberProduct;
-  };
+export const Button = ({
+  numberProduct,
+  handleSubmit,
+  increment,
+  decrement,
+}) => {
   return (
-    <div className="w-full flex-col lg:flex-row lg:gap-5">
+    <div className="w-full px-4 md:pl-8 flex-col lg:flex-row lg:gap-5">
       <button
         className="mb-4 text-lg font-bold rounded-lg bg-light-grayish-blue 
         h-16 w-full lg:w-1/4 text-black flex items-center justify-between"
       >
-        <img
-          className="ml-2"
-          onClick={() => setNumberProduct((numberProduct) => numberProduct - 1)}
-          src={iconMinus}
-          alt="minus"
-        />
+        <img className="ml-2" onClick={decrement} src={iconMinus} alt="minus" />
         {numberProduct}
-        <img
-          className="mr-2"
-          onClick={() => setNumberProduct((numberProduct) => numberProduct + 1)}
-          src={iconPlus}
-          alt="plus"
-        />
+        <img className="mr-2" onClick={increment} src={iconPlus} alt="plus" />
       </button>
       <button
         onClick={handleSubmit}
