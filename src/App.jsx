@@ -22,7 +22,7 @@ const App = () => {
       <Nav numberProduct={numberProduct} />
       <section className="flex flex-col lg:flex-row justify-center items-center min-h-screen lg:gap-16">
         <ProductImg />
-        <div>
+        <div className="flex flex-col">
           <ProductDetail />
           <Button
             numberProduct={numberProduct}

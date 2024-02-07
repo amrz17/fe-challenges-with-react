@@ -7,7 +7,7 @@ export const Button = ({
   decrement,
 }) => {
   return (
-    <div className="w-full px-4 md:pl-8 flex-col lg:flex-row lg:gap-5">
+    <div className="w-full px-4 md:pl-8 flex justify-between flex-col lg:flex-row lg:gap-5">
       <button
         className="mb-4 text-lg font-bold rounded-lg bg-light-grayish-blue 
         h-16 w-full lg:w-1/4 text-black flex items-center justify-between"
