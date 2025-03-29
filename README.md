@@ -1,1 +1,1 @@
-Link to Preview : https://productpage-dghqntoex-amrz17s-projects.vercel.app/
+Link to Preview : https://sneakerproductpage.vercel.app/
